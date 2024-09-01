@@ -1,1 +1,1 @@
-# app-acai
+# app-sushi-para-lovers
