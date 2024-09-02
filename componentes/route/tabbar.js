@@ -120,7 +120,7 @@ const styles = StyleSheet.create({
 
  title:{
     fontSize: 14,
-    color:'#c71127',
+    color:'#000',
     top:10,
  }
 });

@@ -1,16 +1,18 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image } from 'react-native';
+import { useLoadFonts } from '../../componentes/fonts';
 
 
 
 const Foto = require('../../assets/img/inicialFoto.png');
 
 export default function Home(){
+
     return (
         <View style={styles.container}>
       
 
-      <Text style={styles.title}>Sushi for lovers</Text>
+      <Text style={{ fontFamily: 'japona', fontSize: 24 }}>Sushi for lovers</Text>
 
         <Image source={Foto} style={styles.img} />
 
@@ -49,6 +51,7 @@ export default function Home(){
       color:'#c71127',
       marginBottom:25,
       fontWeight:'bold',
+      fontFamily: 'japona'
   },
 
   

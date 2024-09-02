@@ -7,9 +7,7 @@ const loadFonts = async () => {
   try {
     await Font.loadAsync({
       'Tungsten-Bold': require('../../assets/fonts/Tungsten-Bold.ttf'),
-      'Valorant-Font': require('../../assets/fonts/Valorant-Font.ttf'),
-      'Dinnextw1': require('../../assets/fonts/dinnextw1g_lightitalic.otf'),
-      'Dinnextw1-italic': require('../../assets/fonts/dinnextw1g_mediumitalic.otf'),
+      'japona': require('../../assets/fonts/AsiaSushiBold-gx3PP.otf'),
     });
   } catch (error) {
     console.error('Erro ao carregar fontes:', error);
