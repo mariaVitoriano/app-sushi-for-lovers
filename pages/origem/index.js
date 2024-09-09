@@ -1,13 +1,16 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, Text, View, Image, ScrollView } from 'react-native';
 
 
 
 const img = require('../../assets/img/bee.png');
 
+const img2 = require('../../assets/img/origem.png');
+
 
 export default function Local(){
     return (
+      <ScrollView>
         <View style={styles.container}>
 
         <Image source={img} style={styles.icon} />
@@ -19,10 +22,19 @@ export default function Local(){
         O sushi criado a milhares de anos, tem em sua influência o grande poder de unir pessoas. 
         O poder de encontrar amantes de sushi e uni-los, bem enrolados igual 
         um sushi de salmão e alga.</Text>
+        <View style={styles.card}>
+    
+      <Image source={img2} style={styles.icon2} />
+      
+      <Text style={styles.title2}>A Vida com Sushi é Maravilhosa</Text>
+      <Text style={styles.description}>Quando se trata de experiências culinárias, poucas coisas conseguem rivalizar com a alegria de saborear sushi.
+       A vida com sushi é uma jornada repleta de deliciosas surpresas, texturas intrigantes e sabores que dançam no paladar.</Text>
+    </View>
 
 
 
       </View>
+      </ScrollView>
     );
   }
   
@@ -31,11 +43,16 @@ export default function Local(){
       flex: 1,
       backgroundColor: '#fff',
       alignItems: 'center',
-    
     },
      icon:{
       height: 370,
       width: 385,
+     },
+
+     icon2:{
+      height: 270,
+      width: 260,
+     
      },
      title:{
       fontSize: 24,
@@ -54,6 +71,36 @@ export default function Local(){
       fontSize: 18,
       textAlign:"justify",
       margin:20,
-    }
+    },
+
+    card: {
+      width: 300,
+      height: 360,
+      backgroundColor: '#e6ccb3',
+      borderRadius: 10,
+      padding: 20,
+      margin: 10,
+      shadowColor: '#000',
+      shadowOffset: { width: 0, height: 2 },
+      shadowOpacity: 0.25,
+      shadowRadius: 3.84,
+      elevation: 5,
+    },
+    image: {
+      width: '100%',
+      height: 150,
+      resizeMode: 'cover',
+      borderRadius: 10,
+    },
+    title2: {
+      fontSize: 18,
+      fontWeight: 'bold',
+      marginVertical: 10,
+      textAlign:'center'
+    },
+    description: {
+      fontSize: 14,
+      color: '#666',
+    },
 
   });

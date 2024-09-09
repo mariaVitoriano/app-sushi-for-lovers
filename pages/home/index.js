@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image } from 'react-native';
 import { useLoadFonts } from '../../componentes/fonts';
+import * as Animatable from 'react-native-animatable';
 
 
 
@@ -9,15 +10,15 @@ const Foto = require('../../assets/img/inicialFoto.png');
 export default function Home(){
 
     return (
-        <View style={styles.container}>
+        <Animatable.View 
+        animation={'fadeInUp'}
+        delay={400}
+        
+        style={styles.container}>
       
 
       <Text style={{ fontFamily: 'japona', fontSize: 24 }}>Sushi for lovers</Text>
-
         <Image source={Foto} style={styles.img} />
-
-
-
 
         <Text style={styles.text}>
         O sushi criado a milhares de anos, tem em sua influência o grande poder de unir pessoas. 
@@ -26,8 +27,11 @@ export default function Home(){
 
 
   
+
+
+  
        
-      </View>
+      </Animatable.View>
     );
   }
   

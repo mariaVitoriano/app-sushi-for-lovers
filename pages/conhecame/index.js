@@ -1,4 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
+import { useLoadFonts } from '../../componentes/fonts';
 import { StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native';
 
 const card = require('../../assets/img/card-1.png');
@@ -9,7 +10,7 @@ export default function Cardapio(){
     return (
         <View style={styles.container}>
 
-        <Text  style={styles.title}> Conheça-me</Text>
+        <Text style={{ fontFamily: 'japona', fontSize: 24 }}> Conheça-me</Text>
 
       <View >  
 
@@ -53,7 +54,6 @@ export default function Cardapio(){
       </View>
 
 
-
     
        </View>
 
@@ -90,6 +90,7 @@ export default function Cardapio(){
         marginBottom:25,
         fontWeight:'bold',
         right:80,
+        fontFamily:'japona',
     },
 
     icon:{

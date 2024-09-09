@@ -1,3 +1,4 @@
+
 // src/useLoadFonts.js
 import { useState, useEffect } from 'react';
 import * as Font from 'expo-font';
@@ -6,7 +7,7 @@ import * as Font from 'expo-font';
 const loadFonts = async () => {
   try {
     await Font.loadAsync({
-      'Tungsten-Bold': require('../../assets/fonts/Tungsten-Bold.ttf'),
+  
       'japona': require('../../assets/fonts/AsiaSushiBold-gx3PP.otf'),
     });
   } catch (error) {
@@ -19,7 +20,15 @@ export const useLoadFonts = () => {
   const [fontsLoaded, setFontsLoaded] = useState(false);
 
   useEffect(() => {
-    loadFonts().then(() => setFontsLoaded(true));
+    loadFonts().then(() => {
+      Font.getFonts().then((fonts) => {
+        if (fonts['Tungsten-Bold'] && fonts['japona']) {
+          setFontsLoaded(true);
+        } else {
+          console.error('Fontes não carregadas corretamente');
+        }
+      });
+    });
   }, []);
 
   return fontsLoaded;
