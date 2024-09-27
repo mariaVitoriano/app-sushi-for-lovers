@@ -4,10 +4,10 @@
     "slug": "app-acai",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/img/sushi1.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/img/suhi3.jpg",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
