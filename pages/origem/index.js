@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image, ScrollView, SafeAreaView } from 'react-native';
+import { StyleSheet, Text, View, Image, ScrollView, SafeAreaView, TouchableOpacity } from 'react-native';
 
 const img = require('../../assets/img/bee.png');
 const img2 = require('../../assets/img/origem.jpg');
@@ -57,9 +57,11 @@ export default function Local() {
 
         {/* Frase inspiracional */}
         <View style={styles.quoteBox}>
+          <TouchableOpacity>
           <Text style={styles.inspirationalText}>
             "Aprecie cada pedaço como se fosse o último. A vida é feita de momentos únicos, assim como o sushi."
           </Text>
+          </TouchableOpacity> 
 
         </View>
         

@@ -5,6 +5,7 @@ import { StyleSheet, Text, View, Image, TouchableOpacity, ScrollView } from 'rea
 const card = require('../../assets/img/card-1.png');
 const card2 = require('../../assets/img/card-2.png');
 const card3 = require('../../assets/img/card-3.png');
+const casal = require('../../assets/img/casalfeliz.jpg');
 
 export default function Cardapio(){
   const fontsLoaded = useLoadFonts();
@@ -46,6 +47,9 @@ export default function Cardapio(){
              <Text style={styles.text1}>ソリティアの寿司</Text>
              <Text style={styles.text}>Sushi para solitários</Text>
           </View>
+          <Image source={casal} style={styles.icon3} />
+
+
          </View>
 
     </View>
@@ -136,6 +140,14 @@ const styles = StyleSheet.create({
     
     marginBottom: 10,
 
+  },
+
+
+  icon3: {
+    height: 300,
+    width: 380,
+    
+    marginBottom: 100,
   },
 });
 

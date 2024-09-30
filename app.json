@@ -1,13 +1,13 @@
 {
   "expo": {
-    "name": "app-acai",
-    "slug": "app-acai",
+    "name": "app-sushi",
+    "slug": "app-sushi",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/img/sushi1.png",
+    "icon": "./assets/img/logoo.jpg",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/img/suhi3.jpg",
+      "image": "./assets/img/logoo.jpg",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },

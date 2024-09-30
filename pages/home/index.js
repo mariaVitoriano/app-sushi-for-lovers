@@ -9,6 +9,7 @@ const nori = require('../../assets/img/nori.png');
 const camas = require('../../assets/img/camas.png');
 const pote = require('../../assets/img/pote.png');
 const pessoas = require('../../assets/img/pessoas.png');
+
  
 export default function Home(){
   const fontsLoaded = useLoadFonts();
@@ -33,6 +34,8 @@ return(
   textShadowRadius: 4, 
              }}>Sushi for lovers </Text>
           <Image source={Foto} style={styles.img} />
+          <View style={styles.card5}>
+            </View>
 
           <View style={styles.container1}>
 
@@ -44,17 +47,24 @@ return(
 
           {/* Card com imagem e texto */}
            <View style={styles.card1}>
+           <TouchableOpacity>
             <Image source={nori} style={styles.cardImage} />
+            </TouchableOpacity>
             <Text style={styles.cardText}>Para os solitários</Text>
+            
            </View>
 
            <View style={styles.card2}>
+           <TouchableOpacity>
             <Image source={pote} style={styles.cardImage} />
+            </TouchableOpacity>
             <Text style={styles.cardText}>Para dividir com alguém especial</Text>
            </View>
 
           <View style={styles.card3}>
+          <TouchableOpacity>
              <Image source={camas} style={styles.cardImage} />
+             </TouchableOpacity>
            <Text style={styles.cardText}>Juntos e combinados</Text>
            </View>
 
@@ -67,6 +77,8 @@ return(
    <Animatable.Text animation="fadeIn" delay={400} style={styles.quote}>
     "Compartilhar sushi é compartilhar amor."
    </Animatable.Text>
+   
+
    
  </View>
       </View>
@@ -180,7 +192,8 @@ const styles = StyleSheet.create({
        backgroundColor:'white',
        top:0.0
       },
-})
+    
+});
 
 // export default function Home() {
 //   const fontsLoaded = useLoadFonts();
