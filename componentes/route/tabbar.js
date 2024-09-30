@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StyleSheet, Text, View, Image,TouchableOpacity} from 'react-native';
+import { StyleSheet, Text, View, Image,TouchableOpacity, Button} from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 
@@ -17,24 +17,29 @@ const Tab = createBottomTabNavigator();
 
 export default function TabBar() {
     return (
+        
         <Tab.Navigator screenOptions={{
+            
             tabBarShowLabel: false,
             tabBarStyle: {
                 position: 'absolute',
-                bottom: 25,
-                left: 40,
-                right: 40,
-                borderRadius: 30,
-                height: 50,
-                width:300,
+                borderRadius: 25,
+                height: 70,
+                left: '5%',
+                width: '90%',
                 shadowColor: '#000',
                 shadowOffset: { width: 0, height: 2 },
                 shadowOpacity: 0.75,
                 shadowRadius: 5,
                 backgroundColor:'#000',
                 alignItems:'center',
+                justifyContent:'center',
+                bottom: 10,
+                borderWidth: 25,
+                
             }
         }}>
+            
             <Tab.Screen name="Home" component={Home}
                 options={{
                     headerShown: false,
@@ -101,8 +106,8 @@ export default function TabBar() {
                         }}/>
 
 
-
         </Tab.Navigator>
+        
     );
 }
 
@@ -111,7 +116,8 @@ const styles = StyleSheet.create({
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
-        alignItems: "center"
+        alignItems: "center",
+        
     },
     icon: {
         height: 50,
@@ -120,7 +126,7 @@ const styles = StyleSheet.create({
 
  title:{
     fontSize: 14,
-    color:'#000',
+    color:'#ffff',
     top:10,
  }
 });

@@ -1,18 +1,43 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image, ScrollView } from 'react-native';
+import { StyleSheet, Text, View, Image, ScrollView, SafeAreaView } from 'react-native';
 
 const img = require('../../assets/img/bee.png');
-const img2 = require('../../assets/img/origem.png');
+const img2 = require('../../assets/img/origem.jpg');
 const onda = require('../../assets/img/onda.png');
-
+const loja = require('../../assets/img/loja.jpg');
 
 export default function Local() {
   return (
     <ScrollView>
+      <SafeAreaView>
       <View style={styles.container}>
 
+      <Text style={{ 
+  fontFamily: 'japona', 
+  fontSize: 43,  
+  color: '#e6ccb3',
+  textAlign: 'center',
+  marginBottom: 10,
+  textShadowColor: '#000',   // Cor da sombra (preta neste caso)
+  textShadowOffset: { width: 2, height: 2 }, // Deslocamento da sombra
+  textShadowRadius: 4,  
+  top:85
+}}>A Origem do sushi</Text>
+
+
+
         <Image source={img} style={styles.icon} />
-        <Text style={styles.title}>Origem do Sushi</Text>
+        <Text style={{ 
+  fontFamily: 'japona', 
+  fontSize: 30,  
+  color: '#c71127',
+  textAlign: 'center',
+  marginBottom: 10,
+  textShadowColor: '#000',   // Cor da sombra (preta neste caso)
+  textShadowOffset: { width: 2, height: 2 }, // Deslocamento da sombra
+  textShadowRadius: 4,  
+}}>Amor milenar</Text>
+
 
         <Text style={styles.text}>
           O sushi, criado há milhares de anos, tem uma forte influência na união entre pessoas. 
@@ -27,10 +52,22 @@ export default function Local() {
           A vida com sushi é uma jornada repleta de deliciosas surpresas, texturas intrigantes e sabores que dançam no paladar.
         </Text>
 
+        {/* Onda usada como divisor */}
+        <Image source={onda} style={styles.dividerOnda} />
 
-        <Image source={onda} style={styles.onda} />
+        {/* Frase inspiracional */}
+        <View style={styles.quoteBox}>
+          <Text style={styles.inspirationalText}>
+            "Aprecie cada pedaço como se fosse o último. A vida é feita de momentos únicos, assim como o sushi."
+          </Text>
+
+        </View>
+        
+        <Image source={loja} style={styles.lol} />
       </View>
+      </SafeAreaView>
     </ScrollView>
+    
   );
 }
 
@@ -39,22 +76,23 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
+    padding: 20,
   },
 
   icon: {
     height: 370,
-    width: 385,
-    marginBottom: 20,
+    width: 388,
+    marginBottom: 40,
     resizeMode: 'contain',
   },
 
   icon2: {
-    width: 300,
-    height: 360,
-    backgroundColor: '#e6ccb3',
+    width: 400,
+    height: 260,
+    backgroundColor: 'black',
     borderRadius: 10,
     marginVertical: 20,
-    shadowColor: '#000',
+    shadowColor: 'black',
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
@@ -81,6 +119,7 @@ const styles = StyleSheet.create({
     textShadowColor: '#000',
     textShadowOffset: { width: 0.1, height: 1 },
     textShadowRadius: 3,
+    fontFamily:'japona',
   },
 
   text: {
@@ -91,11 +130,34 @@ const styles = StyleSheet.create({
     marginBottom: 15,
   },
 
-  onda:{
-   
+  dividerOnda: {
+    width: 400,
+    height: 280,
     resizeMode: 'contain',
-    textAlign: 'center',
-   
+    marginVertical: 20,
   },
 
+  quoteBox: {
+    backgroundColor: '#f7f3e9',
+    padding: 15,
+    borderRadius: 10,
+    marginTop: 10,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.15,
+    shadowRadius: 2.84,
+    elevation: 4,
+  },
+
+  inspirationalText: {
+    fontSize: 18,
+    color: '#4a4a4a',
+    textAlign: 'center',
+    fontStyle: 'italic',
+  },
+  lol:{
+    width:400,
+    height:400,
+    top:50,
+  },
 });
